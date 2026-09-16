@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Genius Computer Institute | Computer Education</title>
+
+    <meta name="description"
+          content="Genius Computer Institute - ADCA, DCA, CCC, BCC, DTP, Advanced Excel, Finance & Accounting और Computer Training. 100% Practical Training.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #222;
+            background: #f5f8ff;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #071952, #0b5ed7);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background: white;
+            color: #0b5ed7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .logo h1 {
+            font-size: 22px;
+        }
+
+        .logo p {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 22px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffd43b;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 620px;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(rgba(3,20,70,0.82), rgba(3,20,70,0.82)),
+                radial-gradient(circle at 80% 30%, #198cff, #071952 55%);
+            color: white;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+            padding: 60px 20px;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero h2 {
+            font-size: 52px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 span {
+            color: #ffd43b;
+        }
+
+        .hero p {
+            font-size: 19px;
+            max-width: 650px;
+            margin-bottom: 25px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #ffd43b;
+            color: #111;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #ffd43b;
+            color: #111;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #071952;
+        }
+
+        .hero-card {
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.25);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-card h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .hero-card ul {
+            list-style: none;
+        }
+
+        .hero-card li {
+            padding: 9px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .hero-card li:last-child {
+            border-bottom: none;
+        }
+
+        /* Common */
+        section {
+            padding: 75px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: #071952;
+        }
+
+        .section-title p {
+            color: #666;
+            margin-top: 8px;
+        }
+
+        /* About */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .about-box {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+
+        .about-box h3 {
+            color: #0b5ed7;
+            margin-bottom: 15px;
+            font-size: 25px;
+        }
+
+        .director {
+            background: linear-gradient(135deg, #071952, #0b5ed7);
+            color: white;
+            padding: 35px;
+            border-radius: 15px;
+        }
+
+        .director h3 {
+            color: #ffd43b;
+        }
+
+        /* Courses */
+        .courses {
+            background: #eef4ff;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .course-card {
+            background: white;
+            padding: 28px 20px;
+            text-align: center;
+            border-radius: 14px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+            transition: 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+        }
+
+        .course-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .course-card h3 {
+            color: #071952;
+            margin-bottom: 8px;
+        }
+
+        /* Features */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .feature {
+            padding: 30px 20px;
+            text-align: center;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .feature-icon {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .feature h3 {
+            color: #071952;
+            margin-bottom: 8px;
+        }
+
+        /* Admission */
+        .admission {
+            background: linear-gradient(135deg, #071952, #0b5ed7);
+            color: white;
+        }
+
+        .admission-box {
+            text-align: center;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .admission-box h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .admission-box p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 7px 25px rgba(0,0,0,0.07);
+        }
+
+        .contact-card h3 {
+            color: #071952;
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            margin: 14px 0;
+            font-size: 17px;
+        }
+
+        .contact-item strong {
+            color: #0b5ed7;
+        }
+
+        /* Footer */
+        footer {
+            background: #050d2b;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        /* Floating WhatsApp */
+        .whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 58px;
+            height: 58px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 29px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+            z-index: 999;
+        }
+
+        /* Mobile */
+        @media (max-width: 900px) {
+            .hero-container,
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .course-grid,
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero h2 {
+                font-size: 40px;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .course-grid,
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: auto;
+            }
+
+            .hero h2 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section-title h2 {
+                font-size: 29px;
+            }
+
+            .admission-box h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="navbar">
+
+        <div class="logo">
+            <div class="logo-icon">GC</div>
+
+            <div>
+                <h1>Genius Computer Institute</h1>
+                <p>100% Practical Computer Training</p>
+            </div>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#courses">Courses</a>
+            <a href="#facilities">Facilities</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-container">
+
+        <div>
+
+            <span class="badge">🎓 ADMISSION OPEN</span>
+
+            <h2>
+                Learn Computer Skills
+                <span>Build Your Future</span>
+            </h2>
+
+            <p>
+                Genius Computer Institute में सीखें modern computer
+                skills और पाएं 100% practical training के साथ बेहतर
+                career opportunities.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#courses" class="btn btn-primary">
+                    View Courses
+                </a>
+
+                <a href="tel:8004353554" class="btn btn-outline">
+                    📞 Call Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <h3>Why Choose Us?</h3>
+
+            <ul>
+                <li>✓ 100% Practical Training</li>
+                <li>✓ Experienced Faculty</li>
+                <li>✓ Girls के लिए अलग Batch</li>
+                <li>✓ Free Wi-Fi Facility</li>
+                <li>✓ Computer Lab Practice</li>
+                <li>✓ Career Oriented Courses</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>About Our Institute</h2>
+
+            <p>
+                आपके उज्ज्वल भविष्य के लिए बेहतर computer education
+            </p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+            <div class="about-box">
+
+                <h3>Genius Computer Institute</h3>
+
+                <p>
+                    Genius Computer Institute में विद्यार्थियों को
+                    computer education की practical और career-oriented
+                    training दी जाती है।
+                </p>
+
+                <br>
+
+                <p>
+                    हमारा उद्देश्य विद्यार्थियों को ऐसी computer skills
+                    प्रदान करना है जिनका उपयोग वे education, business,
+                    office और career में कर सकें।
+                </p>
+
+            </div>
+
+
+            <div class="director">
+
+                <h3>Director</h3>
+
+                <h2>Brijnath Bhaskar</h2>
+
+                <br>
+
+                <p>
+                    विद्यार्थियों को बेहतर computer education और
+                    practical training उपलब्ध कराने के लिए समर्पित।
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- COURSES -->
+<section class="courses" id="courses">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Our Courses</h2>
+
+            <p>अपनी आवश्यकता के अनुसार course चुनें</p>
+
+        </div>
+
+
+        <div class="course-grid">
+
+            <div class="course-card">
+                <div class="course-icon">💻</div>
+                <h3>ADCA</h3>
+                <p>Advanced Diploma in Computer Application</p>
+            </div>
+
+
+            <div class="course-card">
+                <div class="course-icon">🖥️</div>
+                <h3>DCA</h3>
+                <p>Diploma in Computer Application</p>
+            </div>
+
+
+            <div class="course-card">
+                <div class="course-icon">📚</div>
+                <h3>CCC</h3>
+                <p>Course on Computer Concepts</p>
+            </div>
+
+
+            <div class="course-card">
+                <div class="course-icon">🎓</div>
+                <h3>BCC</h3>
+                <p>Basic Computer Course</p>
+            </div>
+
+
+            <div class="course-card">
+                <div class="course-icon">🎨</div>
+                <h3>DTP</h3>
+                <p>Desktop Publishing</p>
+            </div>
+
+
+            <div class="course-card">
+                <div class="course-icon">📊</div>
+                <h3>Advanced Excel</h3>
+                <p>Advanced Excel Training</p>
+            </div>
+
+
+            <div class="course-card">
+                <div class="course-icon">💰</div>
+                <h3>Finance & Accounting</h3>
+                <p>Accounting & Finance Training</p>
+            </div>
+
+
+            <div class="course-card">
+                <div class="course-icon">🌐</div>
+                <h3>Internet</h3>
+                <p>Internet & Digital Skills</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FACILITIES -->
+<section id="facilities">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Our Facilities</h2>
+
+            <p>विद्यार्थियों के लिए बेहतर learning environment</p>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+            <div class="feature">
+
+                <div class="feature-icon">💻</div>
+
+                <h3>Practical Training</h3>
+
+                <p>
+                    100% practical computer training
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">👩‍🎓</div>
+
+                <h3>Girls Special Batch</h3>
+
+                <p>
+                    लड़कियों के लिए अलग batch की सुविधा
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">📶</div>
+
+                <h3>Free Wi-Fi</h3>
+
+                <p>
+                    विद्यार्थियों के लिए free Wi-Fi सुविधा
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">👨‍🏫</div>
+
+                <h3>Expert Guidance</h3>
+
+                <p>
+                    बेहतर learning और career guidance
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ADMISSION -->
+<section class="admission">
+
+    <div class="container">
+
+        <div class="admission-box">
+
+            <h2>🎓 Admission Open</h2>
+
+            <p>
+                अपने career को बेहतर बनाने के लिए आज ही Genius
+                Computer Institute में admission लें।
+            </p>
+
+            <div class="buttons" style="justify-content:center;">
+
+                <a href="tel:8004353554"
+                   class="btn btn-primary">
+                    📞 8004353554
+                </a>
+
+                <a href="https://wa.me/918004353554"
+                   target="_blank"
+                   class="btn btn-outline">
+                    WhatsApp पर संपर्क करें
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Contact Us</h2>
+
+            <p>Admission और course information के लिए संपर्क करें</p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+
+                <h3>Institute Information</h3>
+
+                <div class="contact-item">
+                    <strong>🏫 Institute:</strong><br>
+                    Genius Computer Institute
+                </div>
+
+                <div class="contact-item">
+                    <strong>👨‍💼 Director:</strong><br>
+                    Brijnath Bhaskar
+                </div>
+
+                <div class="contact-item">
+                    <strong>📍 Address:</strong><br>
+                    Near Union Bank, Mahaso Mod,
+                    Khurahat, Mau
+                </div>
+
+                <div class="contact-item">
+                    <strong>📞 Mobile:</strong><br>
+                    <a href="tel:8004353554">
+                        8004353554
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <h3>Quick Contact</h3>
+
+                <p>
+                    Course details, fees और admission के लिए
+                    हमें call या WhatsApp करें।
+                </p>
+
+                <br>
+
+                <a href="tel:8004353554"
+                   class="btn btn-primary">
+                    📞 Call Now
+                </a>
+
+                <a href="https://wa.me/918004353554"
+                   target="_blank"
+                   class="btn"
+                   style="background:#25d366;color:white;">
+                    💬 WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        © 2026 Genius Computer Institute. All Rights Reserved.
+    </p>
+
+    <p>
+        100% Practical Computer Training
+    </p>
+
+    <div class="footer-links">
+
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#courses">Courses</a>
+        <a href="#contact">Contact</a>
+
+    </div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+<a class="whatsapp"
+   href="https://wa.me/918004353554"
+   target="_blank"
+   title="WhatsApp पर संपर्क करें">
+
+    💬
+
+</a>
+
+</body>
+</html>
